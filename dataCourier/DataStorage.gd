@@ -1,9 +1,10 @@
 #extends Node
 class_name DataStorage
 var storage_path
-func _init(_storage_path) -> void:
+func _init(_storage_path:String,fastLoadData:bool=true) -> void:
 	self.storage_path=_storage_path
-	load_data()
+	if fastLoadData:
+		load_data()
 func save_data(save_path:String=storage_path):
 	var path=save_path
 	var data = {}

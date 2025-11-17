@@ -31,5 +31,6 @@ func keep_tempData(letterKey):
 
 class moneyC extends DataStorage:
 	var gold:int=0
+	var apple:int=0
 
-var money=moneyC.new("user://money.json")
+var money=moneyC.new("user://money.json",true)
