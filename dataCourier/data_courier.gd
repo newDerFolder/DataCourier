@@ -2,15 +2,16 @@
 extends Node
 #DataCourier​ 0.1|godot 4.5
 
-var tempData_val:Dictionary
-var tempData_letterName:String
+#region DataCourier
+var tempData_val:Variant
+var tempData_key:String
 
-func put_tempData(letterName,newData:Variant):
-	tempData_letterName=letterName
+func put_tempData(letterKey,newData:Variant):
+	tempData_key=letterKey
 	tempData_val=newData
 
-func get_tempData(letterName):
-	if tempData_letterName!=letterName:
+func get_tempData(letterKey):
+	if tempData_key!=letterKey:
 		print("DataCourier​/temp:no this letter")
 		return null
 	var data=tempData_val.duplicate()
@@ -18,10 +19,17 @@ func get_tempData(letterName):
 	print("DataCourier​/temp:get and return letter now")
 	return data
 
-func keep_tempData(letterName):
-	if tempData_letterName!=letterName:
+func keep_tempData(letterKey):
+	if tempData_key!=letterKey:
 		print("DataCourier​/temp:no this letter")
 		return null
 	var data=tempData_val.duplicate()
 	print("DataCourier​/temp:keep and return letter now")
 	return data
+#endregion
+
+
+class moneyC extends DataStorage:
+	var gold:int=0
+
+var money=moneyC.new("user://money.json")
