@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmiv4quhlujtr"
-path="res://.godot/imported/DataCourier_bg.png-d113cff71906841b72302a13a79b89c9.ctex"
+uid="uid://cgh6qs6j7atkw"
+path="res://.godot/imported/DataCourier_nobg.png-6a6513d9845c81ef403a9c1a980e067f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://vcder/dataCourier/DataCourier_bg.png"
-dest_files=["res://.godot/imported/DataCourier_bg.png-d113cff71906841b72302a13a79b89c9.ctex"]
+source_file="res://vcder/DataCourier/sc/DataCourier_nobg.png"
+dest_files=["res://.godot/imported/DataCourier_nobg.png-6a6513d9845c81ef403a9c1a980e067f.ctex"]
 
 [params]
 

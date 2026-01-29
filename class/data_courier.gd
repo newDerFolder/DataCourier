@@ -29,8 +29,9 @@ func keep_tempData(letterKey):
 #endregion
 
 
-class moneyC extends DataStorage:
+
+class moneyC extends JSONStorage:
 	var gold:int=0
 	var apple:int=0
 
-var money=moneyC.new("user://money.json",true)
+var money=moneyC.new("user://money.json")

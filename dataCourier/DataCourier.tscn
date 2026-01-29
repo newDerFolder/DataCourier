@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcq8vudy7plxr"]
-
-[ext_resource type="Script" uid="uid://dnx0yqr0h5ono" path="res://vcder/dataCourier/data_courier.gd" id="1_3a4xy"]
-
-[node name="DataCourier" type="Node"]
-script = ExtResource("1_3a4xy")

@@ -1,4 +1,5 @@
-#extends Node
+## @deprecated: 请改用 JSONStorage。
+## 理由：DataStorage 的自动序列化逻辑已整合至 JSONStorage
 class_name DataStorage
 var storage_path
 func _init(_storage_path:String,fastLoadData:bool=true) -> void:
