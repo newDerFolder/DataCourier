@@ -11,12 +11,11 @@ func save_data() -> void:
 	var properties = object.get_property_list()
 	
 	for prop in properties:
-		# PROPERTY_USAGE_SCRIPT_VARIABLE (4096) 确保只保存开发者定义的变量
 		if prop["usage"] & PROPERTY_USAGE_SCRIPT_VARIABLE:
 			var prop_name = prop["name"]
 			data[prop_name] = object.get(prop_name)
 	
-	var json_string = JSON.stringify(data, "\t") # 添加缩进方便阅读
+	var json_string = JSON.stringify(data, "\t")
 	var file = FileAccess.open(storage_path, FileAccess.WRITE)
 	
 	if file:

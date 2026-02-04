@@ -1,6 +1,7 @@
+##@deprecated
 @icon("res://vcder/dataCourier/DataCourier_nolbg.png")
 extends Node
-#DataCourier​ 0.1|godot 4.5
+#DataCourier​ 0.2|godot 4.5
 
 #region DataCourier
 var tempData_val:Variant
