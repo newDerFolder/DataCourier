@@ -1,3 +1,3 @@
-DataCourier enables quick implementation of JSON save/load functionality by inheriting from the DataStorage class. It is recommended to place the folder into the res://vcder/ path after extraction.
-\n
-DataCourier，通过继承DataStorage类来快速实现json存档读档功能。推荐解压后将文件夹放至res://vcder/ 路径下。
+DataCourier allows for rapid implementation of JSON saving and loading functionality by inheriting from the JSONStorage class. To install, extract the files and place the folder into the res://vcder/ path. Support for additional data types will be introduced in the future.
+
+DataCourier 通过继承 JSONStorage 类，能够快速实现 JSON 数据的保存与加载功能。安装时，请解压文件并将文件夹放入 res://vcder/ 路径下。未来还将提供对更多数据类型的支持。
