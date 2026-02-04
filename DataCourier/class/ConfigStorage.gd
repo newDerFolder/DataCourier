@@ -15,11 +15,9 @@ func save_data() -> void:
 	var properties = object.get_property_list()
 	
 	for prop in properties:
-		# 仅处理脚本定义的变量
 		if prop["usage"] & PROPERTY_USAGE_SCRIPT_VARIABLE:
 			var prop_name = prop["name"]
 			var value = object.get(prop_name)
-			# 将变量保存到默认节下
 			_config.set_value(DEFAULT_SECTION, prop_name, value)
 	
 	var err = _config.save(storage_path)
@@ -32,7 +30,7 @@ func save_data() -> void:
 func load_data() -> void:
 	var err = _config.load(storage_path)
 	
-	# 如果文件不存在，ConfigFile.load 会返回 ERR_FILE_NOT_FOUND
+	
 	if err != OK:
 		if err == ERR_FILE_NOT_FOUND:
 			print("DataCourier: 未找到 Config 文件，将使用默认值。")
@@ -46,7 +44,6 @@ func load_data() -> void:
 	for prop in properties:
 		if prop["usage"] & PROPERTY_USAGE_SCRIPT_VARIABLE:
 			var prop_name = prop["name"]
-			# 如果配置文件中有这个键，则读取并赋值
 			if _config.has_section_key(DEFAULT_SECTION, prop_name):
 				var value = _config.get_value(DEFAULT_SECTION, prop_name)
 				object.set(prop_name, value)
